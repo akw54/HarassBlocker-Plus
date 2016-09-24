@@ -1,0 +1,22 @@
+{
+  "name": "chrome",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "bundle.js",
+  "dependencies": {
+    "watson-developer-cloud": "^2.4.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "test"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "adam wolf",
+  "license": "UNLICENSED"
+}
