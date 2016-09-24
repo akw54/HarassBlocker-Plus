@@ -7,17 +7,35 @@ var tone_analyzer = watson.tone_analyzer({
   version_date: '2016-05-19 '
 });
 
-//var text = "Hello! My name is Adam Wolf.";
-document.addEventListener('DOMContentLoaded', function() {
-    for (i = 0; i < $.find('p').length; i++) {
-        var innerSentences = document.all[0].innerText;
-        for (j = 0; j < innerSentences.length; j++) {
-            console.log(innerSentences[i]);
-            tone_analyzer.tone({ text: innerSentences[i] },
-              function(err, tone) {
-                console.log(JSON.stringify(tone, null, 2));
+var test = function (content, len) {
+    $("._5yl5").initialize( function(){
+        console.log(content[len-1].innerText);
+    });
+
+    for (i = 0; i < len; i++) {
+        var message = content[i].innerText;
+        console.log(message);
+        tone_analyzer.tone({ text: message }, function(err, tone) {
+            $.post('http://harassblocker-yehyaawad.c9users.io:8080/check', function (res) {
+                console.log(res);
             });
-        }
+        });
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    var content = $.find('._5yl5');
+    var len = content.length;
+    test(content, len);
+
+    for (i = 0; i < len; i++) {
+        var message = content[i].innerText;
+        console.log(message);
+        tone_analyzer.tone({ text: message }, function(err, tone) {
+            $.post('http://harassblocker-yehyaawad.c9users.io:8080/check', function (res) {
+                console.log(res);
+            });
+        });
     }
     
     $('#power').on('click', function () {
