@@ -17,9 +17,15 @@ p {
 
 .spoiler {
   position: relative;
-  color: transparent;
+  /*color: transparent;*/
   text-shadow: 0 0 20px #55657a;
   cursor: help;
+  background-color: #F44336;
+  padding: 5px;
+  border-radius: 7px;
+  color: white;
+  font-size: 12px;
+  font-family: sans-serif;
 }
 
 .spoiler::before, .spoiler::after {
@@ -34,9 +40,9 @@ p {
 
 .spoiler::before {
   align-content: center;
-  font-size: 9px;
+  font-size: 16px;
   color: red;
-  content: 'WARNING: POTENTIALLY HARASSING MESSAGE';
+  /*content: 'WARNING: POTENTIALLY HARASSING MESSAGE';*/
 }
 
 .spoiler::after {
