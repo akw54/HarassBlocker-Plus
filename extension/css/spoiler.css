@@ -1,3 +1,59 @@
+@import url(http://fonts.googleapis.com/css?family=Arimo|Fjalla+One);
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0 10%;
+  font: 24px/1.5 'Arimo', sans-serif;
+  color: #55657a;
+  background-color: #fff;
+}
+
+p {
+  text-align: justify;
+}
+
 .spoiler {
-	color : red;
+  position: relative;
+  color: transparent;
+  text-shadow: 0 0 20px #55657a;
+  cursor: help;
+}
+
+.spoiler::before, .spoiler::after {
+  display: block;
+  position: absolute;
+  line-height: 1;
+  font-family: 'Fjalla One', sans-serif;
+  color: #872e27;
+  text-align: center;
+  text-shadow: none;
+}
+
+.spoiler::before {
+  align-content: center;
+  font-size: 9px;
+  color: red;
+  content: 'WARNING: POTENTIALLY HARASSING MESSAGE';
+}
+
+.spoiler::after {
+  opacity: 0;
+  top: 84px;
+  left: calc(50% - 36px);
+  width: 60px;
+  font-size: 60px;
+  line-height: 72px;
+  text-align: center;
+  clip: rect(0, 72px, 72px, 0);
+  content: '3 2 1';  
+}
+
+.spoiler:hover {
+  color: #55657a;
+  text-shadow: 0 0 0 transparent;
+  transition: all 1s;
+  transition-delay: 4s;
 }

@@ -7,7 +7,7 @@ var send = function(message, $elem) {
     if (isHarass) {
       var randomInt = Math.round(Math.random() * 100000);
       var parent = $elem.parent();
-      $(parent).prepend('<div class="spoiler" id="' + randomInt + '">Potentially harsassing message. Click to show.</div>');
+      $(parent).prepend('<div class="spoiler" id="' + randomInt + '">Are you sure?</div>');
       $("#" + randomInt).click(function() {
         $("#" + randomInt).hide();
         $elem.show();
@@ -24,7 +24,7 @@ var handle = function(message) {
 };
 
 var len = content.length;
-$('body').append('<div class="_5yl5"><span>test</span></div>');
+$('body').append('<div class="_5yl5"></div>');
 $(document).ready(function() {
   // Faceboook.com
   $("._5yl5 > span").initialize(function(indx, message) {
