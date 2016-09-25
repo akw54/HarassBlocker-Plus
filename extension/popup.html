@@ -4,32 +4,35 @@
 	    <meta charset="utf-8">
 		<meta name="description" content="A tool which filters harassing context from the internet.">
 		<meta name="author" content="Adam Wolf">
-		
+
 		<title>HarassBlock Plus</title>
-		
-		<!-- Scripts -->
-		<script src="js/bundle.js"></script>
-		<script src="js/jquery.js"></script>
-		<script src="js/jquery.initialize.js"></script>
-		<script src="js/bootstrap.js"></script>
-		<script src="js/popup.js"></script>
-		
+
 		<!-- Cascading Style Sheets -->
-		<link href="css/bootstrap.css" rel="stylesheet" media="screen">
-		<link href="css/custom.css" rel="stylesheet" media="screen">		
+		<link href="css/bootstrap.css" rel="stylesheet" media="screen" >
+		<link href="css/bootstrap4.css" rel="stylesheet" media="screen" >
+		<link href="css/mdb.min.css" rel="stylesheet">
+		<link href="css/custom.css" rel="stylesheet" media="screen">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	</head>
-	
+
 	<body>
-		<nav class="navbar navbar-default" role="navigation">
-			<div class="navbar-header">
-				<span class="navbar-brand">HarassBlock Plus</span>
-			</div>
-		</nav>
+		<nav class="navbar navbar-dark red" role="">
+					<h3 class="navbar-brand">HarassBlock Plus</h3>
+			</nav>
 		<section>
-			<span class="glyphicon glyphicon-eye-close text-danger" id="power"></span>
+			<button type="button" class="btn btn-danger-outline waves-effect" style="left: 28%">
+			<i class="glyphicon glyphicon-eye-close text-danger" style="" id="power"></i>
+		</button>
 			<p id="harassments">
 				Harassments caught: <div id="counter"></div>
 			</p>
 		</section>
+
+		<!-- Scripts -->
+		<script src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/tether.min.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/mdb.min.js"></script>
+		<script src="js/popup.js"></script>
 	</body>
 </html>
