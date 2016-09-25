@@ -1,17 +1,44 @@
+var express = require('express'),
+    cors = require('cors'),
+    app = express(),
+    bodyParser = require("body-parser");
 
-var http = require('http');
-var path = require('path');
+// parse application/x-www-form-urlencoded 
+app.use(bodyParser.urlencoded({
+    extended: true
+}))
 
-var async = require('async');
-var socketio = require('socket.io');
-var express = require('express');
+// parse application/json 
+app.use(bodyParser.json())
 
-var app = express();
-var server = http.createServer(app);
+app.use(cors());
 
-app.use(express.static(path.resolve(__dirname, 'client')));
 
-server.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function(){
-  var addr = server.address();
-  console.log("Chat server listening at", addr.address + ":" + addr.port);
+var harassClassifier = require("./classifier/harassClassifier.js");
+
+app.post('/check', function(req, res, next) {
+    var message = req.body.message;
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'POST');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+
+    harassClassifier.isHarassMessage(message, function(isHarass) {
+        if (isHarass) {
+            console.log("HARASSMENT ALERT: " + message);
+            res.json({
+                isHarassMessage: true
+            });
+        }
+        else {
+            console.log("NO ALERT: " + message);
+            res.json({
+                isHarassMessage: false
+            });
+        }
+    });
+
+});
+
+app.listen(8080, function() {
+    console.log('CORS-enabled web server listening on port 80');
 });
