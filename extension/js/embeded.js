@@ -8,7 +8,7 @@ var send = function(message, $elem) {
     if (isHarass) {
       var randomInt = Math.round(Math.random() * 100000);
       var parent = $elem.parent();
-      $(parent).prepend('<div class="spoiler" id="' + randomInt + '">Are you sure?</div>');
+      $(parent).prepend('<div class="spoiler" id="' + randomInt + '">WARNING: POTENTIALLY HARASSING MESSAGE; CLICK TO SHOW.</div>');
       $("#" + randomInt).click(function() {
         $("#" + randomInt).hide();
         $elem.show();
