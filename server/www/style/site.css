@@ -1,5 +1,5 @@
 body {
-    font-family: 'Open Sans', sans-serif;
+  font-family: 'Baloo Bhai', cursive;
 }
 
 .avatar-label {
@@ -34,7 +34,19 @@ md-list-item .md-list-item-inner .md-avatar {
 
 .big-install-btn {
     height: 70px;
-    width: 250px;
+    width: 280px;
+}
+
+.title-para {
+    font-size: 40px;
+    color: #263238;
+    font-weight: bolder;
+    margin-bottom: 5px;
+}
+
+.para {
+  font-size: 20px;
+  padding-left: 32px
 }
 
 .socialIcon {
