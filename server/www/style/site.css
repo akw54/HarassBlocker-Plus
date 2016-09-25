@@ -1,0 +1,48 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.avatar-label {
+    text-align: center;
+    margin-top: 0px;
+    /*margin-bottom: 10px;*/
+}
+
+.avatar {
+    position: relative;
+    min-width: 350px;
+    min-height: 350px;
+    border-radius: 50%;
+    display: inline-block;
+    overflow: hidden;
+    margin: 0px;
+    vertical-align: middle;
+    zoom: 0.70;
+    transform: translateZ(0);
+    -webkit-transform: scale(0.70);
+    -moz-transform: scale(0.70);
+}
+
+md-list-item .md-list-item-inner .md-avatar {
+    border-radius: 0%;
+}
+
+.install-btn {
+    height: 40px;
+    width: 100px;
+}
+
+.big-install-btn {
+    height: 70px;
+    width: 250px;
+}
+
+.socialIcon {
+    width: 100px;
+    height: 100px;
+    zoom: 0.50;
+}
+
+.material-icons.orange600 {
+    color: #01579B;
+}

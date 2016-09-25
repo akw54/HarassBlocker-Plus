@@ -1,0 +1,82 @@
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Angular Material style sheet -->
+        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link rel="stylesheet" href="./style/site.css"/>
+
+    </head>
+    <body ng-app="MyApp" ng-controller="AppCtrl">
+        <!--
+    Your HTML content here
+  -->
+        <md-content layout="column">
+            <md-toolbar flex="10" md-colors="{background: 'red-700'}">
+                <div class="md-toolbar-tools">
+                    <span flex="5"></span>
+                    <h2>
+                        <span>HarassBlock +</span>
+                    </h2>
+                    <span flex="55"></span>
+                    <md-button class="md-raised install-btn" aria-label="Install">
+                        Install
+                    </md-button>
+                    <md-button class="md-raised install-btn" md-colors="{background: 'light-green-500'}" aria-label="Donate">
+                        Donate
+                    </md-button>
+                </div>
+            </md-toolbar>
+
+            <md-content flex="90" md-colors="{background: 'orange-800'}" class="layout-padding">
+                <div layout="column" layout-align="center">
+                    <md-button flex="35" class="avatar-btn" ng-disabled="true">
+                        <md-icon
+                            class="avatar"
+                            md-whiteframe="20"
+                            md-svg-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjAiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9IiNEMzJGMkYiID48ZyBmaWxsPSJub25lIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLWxpbmVjYXA9ImJ1dHQiIHN0cm9rZS1saW5lam9pbj0ibWl0ZXIiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgc3Ryb2tlLWRhc2hhcnJheT0iIiBzdHJva2UtZGFzaG9mZnNldD0iMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSJub3JtYWwiIGZvbnQtc2l6ZT0iMTIiIHRleHQtYW5jaG9yPSJzdGFydCIgbWl4LWJsZW5kLW1vZGU9Im5vcm1hbCI+PGc+PGc+PHBhdGggZD0iTTAsMjRsMCwtMjRsMjQsMGwwLDI0eiIgZmlsbD0ibm9uZSI+PC9wYXRoPjxwYXRoIGQ9Ik0xMiwyNGMtNi42Mjc0MiwwIC0xMiwtNS4zNzI1OCAtMTIsLTEybDAsMGMwLC02LjYyNzQyIDUuMzcyNTgsLTEyIDEyLC0xMmwwLDBjNi42Mjc0MiwwIDEyLDUuMzcyNTggMTIsMTJsMCwwYzAsNi42Mjc0MiAtNS4zNzI1OCwxMiAtMTIsMTJ6IiBmaWxsPSIjZmFmYWZhIj48L3BhdGg+PGcgZmlsbD0iI2QzMmYyZiI+PHBhdGggZD0iTTEwLjgsNGMtMC40NDE2LDAgLTAuOCwwLjM1ODQgLTAuOCwwLjhsMCw1LjZjMCwwLjIyMDggLTAuMTc5MiwwLjQgLTAuNCwwLjRjLTAuMjIwOCwwIC0wLjQsLTAuMTc5MiAtMC40LC0wLjRsMCwtNC44YzAsLTAuNDQxNiAtMC4zNTg0LC0wLjggLTAuOCwtMC44Yy0wLjQ0MTYsMCAtMC44LDAuMzU4NCAtMC44LDAuOGwwLDhsMCwwLjk1bC0xLjE1LC0wLjg3NWMtMC44NCwtMC42NDI0IC0yLjAxNTYsLTAuNjQ5NiAtMi44NSwwbDQuMDI1LDUuM2MwLjQ4NCwwLjYzODQgMS4yNSwxLjAyNSAyLjA1LDEuMDI1bDMuNTI1LDBjMS43NjcyLDAgMy4yLC0xLjQzMjggMy4yLC0zLjJsMCwtMS42bDAsLTQuOGwwLC0zLjJjMCwtMC40NDE2IC0wLjM1ODQsLTAuOCAtMC44LC0wLjhjLTAuNDQxNiwwIC0wLjgsMC4zNTg0IC0wLjgsMC44bDAsMy4yYzAsMC4yMjA4IC0wLjE3OTIsMC40IC0wLjQsMC40Yy0wLjIyMDgsMCAtMC40LC0wLjE3OTIgLTAuNCwtMC40bDAsLTQuOGMwLC0wLjQ0MTYgLTAuMzU4NCwtMC44IC0wLjgsLTAuOGMtMC40NDE2LDAgLTAuOCwwLjM1ODQgLTAuOCwwLjhsMCw0LjhjMCwwLjIyMDggLTAuMTc5MiwwLjQgLTAuNCwwLjRjLTAuMjIwOCwwIC0wLjQsLTAuMTc5MiAtMC40LC0wLjRsMCwtNS42YzAsLTAuNDQxNiAtMC4zNTg0LC0wLjggLTAuOCwtMC44eiI+PC9wYXRoPjwvZz48L2c+PC9nPjwvZz48L3N2Zz4="></md-icon>
+                    </md-button>
+                    <div layout="row" layout-align="center">
+                        <div layout="column">
+                            <h1 style="color: #263238">
+                                <span>
+                                    <b>TOGETHER WE CAN #HACKHARASSMENT</b>
+                                </span>
+                            </h1>
+                            <div style="padding-left: 32px">
+                                <span>
+                                    <em>Tech and media leaders have a collective responsibility and capability to<br/>identify solutions that can help reduce different forms of online harassment.</em>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <br/>
+                    <br/>
+                    <div layout="row" layout-align="center">
+                        <md-button class="md-raised big-install-btn" aria-label="Learn More" md-colors="{background: 'blue-900'}">
+                            <md-icon
+                            md-svg-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjAiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9IiNGQUZBRkEiID4gICAgPHBhdGggZD0iTTE5LjgsMTAuMUMxOC45LDYuNiwxNS44LDQsMTIsNEM5LDQsNi40LDUuNiw1LDguMUMyLjIsOC42LDAsMTEsMCwxNGMwLDMuMywyLjcsNiw2LDZjMSwwLDExLjksMCwxMywwYzIuOCwwLDUtMi4yLDUtNSBDMjQsMTIuNSwyMi4yLDEwLjQsMTkuOCwxMC4xeiBNMTEsMTNWOWgydjRoM2wtNCw1bC00LTVIMTF6Ij48L3BhdGg+PC9zdmc+">
+                            </md-icon>
+                            &nbsp;&nbsp; Get HarassBlock +
+                        </md-button>
+                    </div>
+
+                </div>
+
+            </md-content>
+        </md-content>
+
+        <!-- Angular Material requires Angular.js Libraries -->
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+
+        <!-- Angular Material Library -->
+        <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+
+        <!-- My scripts -->
+        <script src="./app/app.js"></script>
+
+    </body>
+</html>
