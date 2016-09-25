@@ -4,13 +4,6 @@
   box-sizing: border-box;
 }
 
-body {
-  padding: 0 10%;
-  font: 24px/1.5 'Arimo', sans-serif;
-  color: #55657a;
-  background-color: #fff;
-}
-
 p {
   text-align: justify;
 }
@@ -21,8 +14,8 @@ p {
   text-shadow: 0 0 20px #55657a;
   cursor: help;
   background-color: #F44336;
-  padding: 5px;
-  border-radius: 7px;
+  /*padding: 5px;*/
+  /*border-radius: 7px;*/
   color: white;
   font-size: 12px;
   font-family: sans-serif;
@@ -54,7 +47,7 @@ p {
   line-height: 72px;
   text-align: center;
   clip: rect(0, 72px, 72px, 0);
-  content: '3 2 1';  
+  content: '3 2 1';
 }
 
 .spoiler:hover {
@@ -62,4 +55,12 @@ p {
   text-shadow: 0 0 0 transparent;
   transition: all 1s;
   transition-delay: 4s;
+}
+
+.spoiler:hover::before {
+  animation: countdown-before 5s forwards;
+}
+
+.spoiler:hover::after {
+  animation: countdown-after 5s forwards;
 }
