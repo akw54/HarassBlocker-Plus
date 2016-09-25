@@ -4,7 +4,8 @@ function(request, sender, sendResponse) {
             message: request.message
         },
         function(res) {
-        	sendResponse(res);
+        	sendResponse(res.isHarassMessage);
         	console.log(res.isHarassMessage);
     	});
+    return true;
 });
