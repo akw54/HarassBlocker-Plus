@@ -1,10 +1,6 @@
+console.log("background");
 chrome.runtime.onMessage.addListener(
-function(request, sender, sendResponse) {
-    $.post("http://harassblocker-yehyaawad.c9users.io:8080/check", {
-            message: request.message
-        },
-        function(res) {
-        	sendResponse(res);
-        	console.log(res.isHarassMessage);
-    	});
+  function(request, sender, sendResponse) {
+    console.log(sender.tab ? "from a content script:" + sender.tab.url : "from the extension");
+    sendResponse("recieved");
 });
