@@ -8,11 +8,13 @@ app.use(bodyParser.urlencoded({
     extended: true
 }))
 
+// Website
+app.use('/', express.static('www'));
+
 // parse application/json 
 app.use(bodyParser.json())
 
 app.use(cors());
-
 
 var harassClassifier = require("./classifier/harassClassifier.js");
 
