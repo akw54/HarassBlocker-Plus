@@ -1,5 +1,6 @@
 var content = $.find('._5yl5');
 var send = function(message, $elem) {
+	$elem.hide();
   chrome.runtime.sendMessage({
     message: message,
     sender: "content"
@@ -16,6 +17,8 @@ var send = function(message, $elem) {
       });
       $elem.hide();
       var original = $elem.hide();
+    } else {
+    	$elem.show();
     }
   });
 };
