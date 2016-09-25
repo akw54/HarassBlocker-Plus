@@ -8,11 +8,20 @@ var send = function (message, $elem) {
     });
 };
 
+var handle = function (message) {
+	send($(message).text(), $(message));
+    console.log($(message).text());
+};
+
 var len = content.length;
 $('body').append('<div class="_5yl5"><span>test</span></div>');
 $(document).ready(function () {
+    // Faceboook.com
     $("._5yl5 > span").initialize(function (indx, message) {
-        send($(message).text(), $(message));
-        console.log($(message).text());
+        handle(message);
+    });
+    // Messenger.com
+    $("._3oh-").initialize(function (indx, message) {
+        handle(message);
     });
 });
