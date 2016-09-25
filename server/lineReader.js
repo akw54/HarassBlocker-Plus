@@ -19,11 +19,7 @@ function readLines(input, callback) {
       callback(remaining);
     }
   });
-}
-
-function func(data) {
-  console.log('Line: ' + data);
-}
+};
 
 module.exports = function (fileName, callback) {
     var input = fs.createReadStream(fileName);

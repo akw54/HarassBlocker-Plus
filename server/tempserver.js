@@ -19,6 +19,9 @@ app.post('/check', function(req, res, next) {
     if (rand < 0.7) {
         harass = true;
     }
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'POST');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     res.json({
         isHarassMessage: harass
     });
