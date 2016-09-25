@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setInterval(function () {
         chrome.runtime.sendMessage({sender: "popup"}, {}, function(count) {
             $("#counter").text(count);
+            console.log(count);
         });
     }, 100);
 });

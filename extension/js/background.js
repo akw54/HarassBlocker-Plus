@@ -12,7 +12,7 @@ chrome.runtime.onMessage.addListener(
 		        function(res) {
 		        	sendResponse(res.isHarassMessage);
 		        	console.log(res.isHarassMessage);
-		        	if (isHarassMessage) {
+		        	if (res.isHarassMessage) {
 		        		count++;
 		        	}
 		    	});
