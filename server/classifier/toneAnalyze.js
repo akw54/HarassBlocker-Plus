@@ -1,8 +1,8 @@
 var watson = require('watson-developer-cloud');
 
 var tone_analyzer = watson.tone_analyzer({
-    username: '74046f25-1dca-4b0f-9211-efb47dc49825',
-    password: 'fkiya1W5n0ce',
+    username: '65ce1b08-085e-469a-834b-9674f0a13704',
+    password: 'wvzOHUd0JYos',
     version: 'v3',
     version_date: '2016-05-19 '
 });
@@ -16,7 +16,6 @@ module.exports = {
                 if (err)
                     console.log(err);
                 else {
-                    // console.log("WATSON API CALL");
                     callback(tone);
                 }
             });
