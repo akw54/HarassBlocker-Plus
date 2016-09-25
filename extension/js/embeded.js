@@ -1,7 +1,8 @@
 var content = $.find('._5yl5');
 var send = function(message, $elem) {
   chrome.runtime.sendMessage({
-    message: message
+    message: message,
+    sender: "content"
   }, {}, function(isHarass) {
     console.log(isHarass);
     if (isHarass) {

@@ -1,3 +1,12 @@
+
+// var toggle = function() {
+//     chrome.tabs.query({}, function(tabs) {
+//         for (var i=0; i<tabs.length; ++i) {
+//             chrome.tabs.sendMessage(tabs[i].id, {from: 'popup', title: "toggle"});
+//         }
+//     });
+// };
+
 document.addEventListener('DOMContentLoaded', function() {
     $('#power').on('click', function () {
         if ($('#power').hasClass('glyphicon-eye-close')) {
@@ -11,5 +20,11 @@ document.addEventListener('DOMContentLoaded', function() {
             $('#power').removeClass('text-muted');
             $('#power').addClass('text-danger');
         }
-    }); 
+    });
+    // update counter
+    setInterval(function () {
+        chrome.runtime.sendMessage({sender: "popup"}, {}, function(count) {
+            $("#counter").text(count);
+        });
+    }, 100);
 });
