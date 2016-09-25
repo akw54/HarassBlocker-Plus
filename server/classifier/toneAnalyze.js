@@ -16,7 +16,7 @@ module.exports = {
                 if (err)
                     console.log(err);
                 else {
-                    console.log("WATSON API CALL");
+                    // console.log("WATSON API CALL");
                     callback(tone);
                 }
             });
