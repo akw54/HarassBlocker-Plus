@@ -1,4 +1,4 @@
-alert("embeded");
+console.log("embeded");
 var content = $.find('._5yl5');
 var send = function (message) {
     chrome.runtime.sendMessage({message: message}, function(res) {
@@ -13,7 +13,7 @@ var len = content.length;
 // }
 $('body').append('<div class="_5yl5"><span>test</span></div>');
 $(document).ready(function () {
-    $("._5yl5 > span").initialize(function (message) {
+    $("._5yl5 > span").initialize(function (indx, message) {
         //send(message);
         console.log(message);
     });
