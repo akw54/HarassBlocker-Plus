@@ -28,7 +28,8 @@
 	"content_scripts": [
     {
       "matches": ["https://www.facebook.com/*", "https://www.messenger.com/*"],
-      "js": ["js/jquery.js", "js/jquery.initialize.js", "js/embeded.js"]
+      "js": ["js/jquery.js", "js/jquery.initialize.js", "js/embeded.js"],
+      "css": ["css/spoiler.css"]
     }
   ],
 	"content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
